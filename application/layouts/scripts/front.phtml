@@ -1,0 +1,49 @@
+<?= $this->doctype(); // выводим doctype: <!DOCTYPE html>?> 
+<html>
+    <head>
+        <?
+        // выводим тег <title>
+        echo $this->headTitle(); 
+        
+        // выводим мета-теги
+        echo $this->headMeta();
+        
+        // выводим яваскрипты
+        echo $this->headScript();
+        
+        // выводим css фалы
+        echo $this->headLink();
+        ?>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+
+            </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container" style="width: auto">
+                        <a class="brand" href="/">
+                            SmallCMS
+                        </a>
+                        <div class="nav-collapse">
+                            <form class="navbar-search pull-right">
+                                <input type="text" class="search-query" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <?= $this->layout()->content; // здесь будет автоматичеки выводиться содержимое скриптов вида?>
+            </div>
+            <hr/>
+            <div class="footer">
+                © SmallCMS <?= date('Y') ?>
+                <div class="footer-menu">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
