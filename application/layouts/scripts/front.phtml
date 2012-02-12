@@ -27,21 +27,32 @@
                             SmallCMS
                         </a>
                         <div class="nav-collapse">
-                            <form class="navbar-search pull-right">
-                                <input type="text" class="search-query" placeholder="Search">
-                            </form>
+                            <!-- выводим главное меню -->
+                            <?= $this->layout()->nav ?>
+                            
+                            <!-- выводим форму поиска -->
+                            <?= $this->layout()->searchform ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="content">
-                <?= $this->layout()->content; // здесь будет автоматичеки выводиться содержимое скриптов вида?>
+            <div class="span4">
+                <div class="well" style="padding: 8px 0">
+                    <!-- выводим меню пользователя -->
+                    <?= $this->layout()->userMenu ?>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content">
+                    <?= $this->layout()->content; // здесь будет автоматичеки выводиться содержимое скриптов вида?>
+                </div>
             </div>
             <hr/>
             <div class="footer">
                 © SmallCMS <?= date('Y') ?>
                 <div class="footer-menu">
-                    
+                    <!-- выводим футер меню -->
+                    <?= $this->layout()->footerMenu ?>
                 </div>
             </div>
         </div>
