@@ -1,4 +1,6 @@
-<?= $this->doctype(); // выводим doctype: <!DOCTYPE html>?> 
+<?= $this->doctype(); // выводим doctype: <!DOCTYPE html>
+$this->layout()->searchform = new Form_Search();
+?> 
 <html>
     <head>
         <?
@@ -43,7 +45,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="content">
+                <div class="content span7">
                     <?= $this->layout()->content; // здесь будет автоматичеки выводиться содержимое скриптов вида?>
                 </div>
             </div>

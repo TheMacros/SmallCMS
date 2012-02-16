@@ -6,7 +6,7 @@ defined('APPLICATION_PATH')
 
 // Объявляем константу APPLICATION_ENV - prodution или development
 defined('APPLICATION_ENV')
-    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'development'));
 
 // добавляем папку /library к include_path
 set_include_path(implode(PATH_SEPARATOR, array(

@@ -1,5 +1,30 @@
 <?php
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
+    
+    protected function _initAutoLoad(){
+        // получаем экземпляр класса Zend_Loader_Autoloader
+        $autoLoader = Zend_Loader_Autoloader::getInstance();
+        
+        // регистрируем пространство имен SmallCMS_
+        $autoLoader->registerNamespace('SmallCMS_');
+        
+        // указываем в загрузчике ресурсов нужные нам параметры
+        $resourceLoader = new Zend_Loader_Autoloader_Resource(array(
+            'basePath'      => APPLICATION_PATH,
+            'namespace'     => '',
+            // тут перечисляются ресурсы, такие как формы, модули и так далее...
+            'resourceTypes' => array(
+                'form' => array(
+                    // тут мы указываем, что автолоадер будет искать классы с именами
+                    // которые начинаются на Form_ в папке application/forms/
+                    'path'      => 'forms/', 
+                    'namespace' => 'Form_',
+                )
+            ),
+        ));
+        return $autoLoader;
+    }
+    
     public function _initView(){
         // создаем объект view 
         $view = new Zend_View();
