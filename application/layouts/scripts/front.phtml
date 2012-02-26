@@ -38,7 +38,14 @@ $this->layout()->searchform = new Form_Search();
                     </div>
                 </div>
             </div>
-            <div class="span4">
+            <? if (!empty($this->layout()->message)){ ?>
+                <div class="alert <?= $this->layout()->message_class ?>">
+                    <a class="close" data-dismiss="alert">×</a>
+                    <?= $this->layout()->message ?>
+                </div>
+            <? } ?>
+            <div></div>
+            <div class="span3">
                 <div class="well" style="padding: 8px 0">
                     <!-- выводим меню пользователя -->
                     <?= $this->layout()->userMenu ?>
@@ -51,7 +58,7 @@ $this->layout()->searchform = new Form_Search();
             </div>
             <hr/>
             <div class="footer">
-                © SmallCMS <?= date('Y') ?>
+              © SmallCMS <?= date('Y') ?> [<a href="http://instanceof.org">instanceof.org</a>]
                 <div class="footer-menu">
                     <!-- выводим футер меню -->
                     <?= $this->layout()->footerMenu ?>

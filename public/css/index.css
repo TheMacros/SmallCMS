@@ -1,0 +1,16 @@
+form label {
+  font-weight: bold;
+  padding: 0 0 0 10px; }
+  form label.required {
+    background: url("../img/req.gif") no-repeat scroll 0 0 transparent; }
+form .errors {
+  background: #f2dede;
+  border: 1px solid #eed3d7;
+  list-style: none outside none;
+  border-radius: 4px 4px 4px 4px;
+  margin-bottom: 18px;
+  padding: 8px 35px 8px 14px; }
+  form .errors li {
+    list-style: none outside none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #b94a48; }

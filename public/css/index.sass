@@ -1,0 +1,22 @@
+$error_txt: #B94A48
+$error_back: #F2DEDE
+$error_border: #EED3D7
+form
+    label
+        font-weight: bold
+        padding: 0 0 0 10px
+        &.required
+            background: url('../img/req.gif') no-repeat scroll 0 0 transparent
+    .errors
+        background: $error_back
+        border: 1px solid $error_border
+        list-style: none outside none
+        border-radius: 4px 4px 4px 4px
+        margin-bottom: 18px
+        padding: 8px 35px 8px 14px
+        
+        li
+            list-style: none outside none
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+            color: $error_txt
+            

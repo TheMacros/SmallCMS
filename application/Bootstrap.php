@@ -19,6 +19,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
                     // которые начинаются на Form_ в папке application/forms/
                     'path'      => 'forms/', 
                     'namespace' => 'Form_',
+                ), 
+                'model' => array(
+                    // указываем, что автолоадер будет искать классы с именами
+                    // которые начинаются на Model_ в папке application/models/
+                    'path'      => 'models/',
+                    'namespace' => 'Model_'
                 )
             ),
         ));
@@ -47,6 +53,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
         
         // подключаем пока единственный css файл
         $view->headLink()->appendStylesheet('/css/bootstrap.css');
+        $view->headLink()->appendStylesheet('/css/index.css');
         
         return $view;
     }
