@@ -25,4 +25,9 @@ class SupportController extends Zend_Controller_Action {
         }
         $this->view->form = $frmBug;
     }
+    
+    public function bugListAction(){
+        $mdlBugs = new Model_Bug();
+        $this->view->bugs = $mdlBugs->getBugs();
+    }
 }

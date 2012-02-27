@@ -1,0 +1,25 @@
+<? if (count($this->bugs)){ ?>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Author</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Subject</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th class="span2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?= $this->PartialLoop('/_partials/bug-row.phtml', $this->bugs) ?>
+        </tbody>
+    </table>    
+<? }else { ?>
+    <div class="alert alert-info">
+        No bugs yet
+    </div>
+<? } ?>
+<a href="/support/submit-bug/" class="btn btn-primary">Submit a bug</a>

@@ -1,0 +1,17 @@
+<tr>
+    <td><?= $this->id ?></td>
+    <td><?= $this->author ?></td>
+    <td><?= $this->email ?></td>
+    <td><?= date('Y-m-d H:i:s', $this->date) ?></td>
+    <td><?= ucfirst($this->type) ?></td>
+    <td>
+        <?= (strlen($this->subject) > 15)? mb_substr($this->subject, 0, 15, 'utf-8') . '...' : $this->subject ?>
+    </td>
+    <td><?= ucfirst($this->priority) ?></td>
+    <td><?= ucfirst($this->status) ?></td>
+    <td>
+        <a href="" title="Open"><i class="icon-folder-open"></i></a>
+        <a href="" title="Edit"><i class="icon-pencil"></i></a>
+        <a href="" title="Delete"><i class="icon-trash"></i></a>
+    </td>
+</tr>
