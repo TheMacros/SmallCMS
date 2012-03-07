@@ -8,7 +8,7 @@ class Form_Search extends Zend_Form{
         $this->setAction('/index/search/');
         
         // устанавливаем class="navbar-search pull-right" 
-        $this->setAttrib('class', 'navbar-search pull-right');
+        $this->setAttrib('class', 'navbar-search');
         
         // устанавливаем декораторы FormElements и tag = form (об этом ниже)
         $this->setDecorators(array('FormElements', 'tag' => 'form'));

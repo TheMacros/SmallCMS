@@ -50,6 +50,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
         $view->headScript()->appendFile('/js/jquery-1.7.1.min.js');
         $view->headScript()->appendFile('/js/jquery-ui-1.8.17.custom.min.js');
         $view->headScript()->appendFile('/js/bootstrap.min.js');
+        $view->headScript()->appendFile('/js/index.js');
         
         // подключаем пока единственный css файл
         $view->headLink()->appendStylesheet('/css/bootstrap.css');
@@ -58,4 +59,3 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
         return $view;
     }
 }
-

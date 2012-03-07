@@ -1,6 +1,5 @@
 <?= $this->doctype(); // выводим doctype: <!DOCTYPE html>
 $this->layout()->searchform = new Form_Search();
-$auth = Zend_Auth::getInstance();
 ?> 
 <html>
     <head>
@@ -19,7 +18,7 @@ $auth = Zend_Auth::getInstance();
         ?>
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <div class="header">
 
             </div>
@@ -35,43 +34,24 @@ $auth = Zend_Auth::getInstance();
                             
                             <!-- выводим форму поиска -->
                             <?= $this->layout()->searchform ?>
-                            <ul class="nav pull-right">
-                                <li class="divider-vertical"></li>
-                                <? if ($auth->hasIdentity()){?>
-                                    <li>
-                                        <a href="" title="My Profile">
-                                            <?= (!empty($auth->getIdentity()->first_name))? 
-                                                $auth->getIdentity()->first_name : $auth->getIdentity()->email ?>
-                                        </a>
-                                    </li>
-                                    <li><a href="<?= $this->url(array(), 'user-logout') ?>">Logout</a></li>
-                                <? }else{ ?>
-                                    <li><a href="<?= $this->url(array(), 'user-login') ?>" id="login">Login</a></li>
-                                <? } ?>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <? if(!$auth->hasIdentity()){?>
-            <div id="auth-form">
-                <div class="loading"></div>
-                <?= new Form_Login(array('ajax' => 'true'))?>
-            </div>
-            <? } ?>
             <? if (!empty($this->layout()->message)){ ?>
                 <div class="alert <?= $this->layout()->message_class ?>">
                     <a class="close" data-dismiss="alert">×</a>
                     <?= $this->layout()->message ?>
                 </div>
             <? } ?>
+            <div></div>
             <div class="span3">
                 <div class="well" style="padding: 8px 0">
                     <!-- выводим меню пользователя -->
                     <?= $this->layout()->userMenu ?>
                 </div>
             </div>
-            <div class="container main-content">
+            <div class="container">
                 <div class="content span8">
                     <?= $this->layout()->content; // здесь будет автоматичеки выводиться содержимое скриптов вида?>
                 </div>

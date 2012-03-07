@@ -22,5 +22,30 @@ $application = new Zend_Application(
     APPLICATION_ENV,
     APPLICATION_PATH . '/configs/application.ini'
 );
-$application->bootstrap()
-            ->run();
+$application->bootstrap();
+// получаем роутер
+$router = Zend_Controller_Front::getInstance()->getRouter();
+// добавляем маршрут для действия /user/login
+$router->addRoute(
+        // имя маршрута 
+        // (потом может использоваться в хелпере url() в скриптах вида)
+        'user-login',
+        new Zend_Controller_Router_Route(
+                '/login/',                  // новый маршрут
+                array(
+                    'controller' => 'user', // контроллер
+                    'action' => 'login'     // экшен
+                )
+        )
+);
+$router->addRoute(
+        'user-logout',
+        new Zend_Controller_Router_Route(
+                '/logout/', 
+                array(
+                    'controller' => 'user', 
+                    'action' => 'logout'
+                )
+        )
+);
+$application->run();
