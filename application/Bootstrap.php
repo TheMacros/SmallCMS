@@ -28,12 +28,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
                 )
             ),
         ));
+        
         return $autoLoader;
     }
     
     public function _initView(){
         // создаем объект view 
         $view = new Zend_View();
+        $frontController = Zend_Controller_Front::getInstance();
+        $l = new Zend_Application_Resource_Layout();
         
         // указываем doctype соответствующий стандарту HTML5
         $view->doctype('HTML5');
@@ -54,6 +57,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
         
         // подключаем пока единственный css файл
         $view->headLink()->appendStylesheet('/css/bootstrap.css');
+        
         $view->headLink()->appendStylesheet('/css/index.css');
         
         return $view;

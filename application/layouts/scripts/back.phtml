@@ -1,5 +1,6 @@
 <?= $this->doctype(); // выводим doctype: <!DOCTYPE html>
 $this->layout()->searchform = new Form_Search();
+$auth = Zend_Auth::getInstance();
 ?> 
 <html>
     <head>
@@ -24,16 +25,34 @@ $this->layout()->searchform = new Form_Search();
             </div>
             <div class="navbar">
                 <div class="navbar-inner">
-                    <div class="container" style="width: auto">
+                    <div class="container-fluid" style="width: auto">
+                        <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
                         <a class="brand" href="/">
                             SmallCMS
                         </a>
                         <div class="nav-collapse">
                             <!-- выводим главное меню -->
                             <?= $this->layout()->nav ?>
-                            
                             <!-- выводим форму поиска -->
                             <?= $this->layout()->searchform ?>
+                            <ul class="nav pull-right">
+                                <li class="divider-vertical"></li>
+                                <? if ($auth->hasIdentity()){?>
+                                    <li>
+                                        <a href="<?= $auth->getIdentity()->role == 'admin'? '/admin/' : ''  ?>" title="My Profile">
+                                            <?= (!empty($auth->getIdentity()->first_name))? 
+                                                $auth->getIdentity()->first_name : $auth->getIdentity()->email ?>
+                                        </a>
+                                    </li>
+                                    <li><a href="<?= $this->url(array(), 'user-logout') ?>">Logout</a></li>
+                                <? }else{ ?>
+                                    <li><a href="<?= $this->url(array(), 'user-login') ?>" id="login">Login</a></li>
+                                <? } ?>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -45,15 +64,18 @@ $this->layout()->searchform = new Form_Search();
                 </div>
             <? } ?>
             <div></div>
-            <div class="span3">
-                <div class="well" style="padding: 8px 0">
-                    <!-- выводим меню пользователя -->
-                    <?= $this->layout()->userMenu ?>
-                </div>
-            </div>
-            <div class="container">
-                <div class="content span8">
-                    <?= $this->layout()->content; // здесь будет автоматичеки выводиться содержимое скриптов вида?>
+            
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="well" style="padding: 8px 0">
+                            <!-- выводим меню пользователя -->
+                            <?= $this->layout()->userMenu ?>
+                        </div>
+                    </div>
+                    <div class="content span9">
+                        <?= $this->layout()->content; // здесь будет автоматичеки выводиться содержимое скриптов вида?>
+                    </div>
                 </div>
             </div>
             <hr/>

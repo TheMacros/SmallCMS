@@ -363,3 +363,107 @@
 [Thu Mar 08 00:06:36 2012] [error] [client 127.0.0.1] PHP  10. include() /usr/share/php/Zend/View.php:108
 [Thu Mar 08 00:06:36 2012] [error] [client 127.0.0.1] PHP  11. Zend_Form->__toString() /usr/share/php/Zend/View.php:59
 [Thu Mar 08 00:06:36 2012] [error] [client 127.0.0.1] PHP  12. trigger_error('Exception caught by form: Plugin by name \\'Div\\' was not found in the registry; used paths:\\nZend_Form_Decorator_: Zend/Form/Decorator/\\nStack Trace:\\n#0 /usr/share/php/Zend/Form/Element.php(1828): Zend_Loader_PluginLoader->load(\\'div\\')\\n#1 /usr/share/php/Zend/Form/Element.php(2208): Zend_Form_Element->_getDecorator(\\'div\\', NULL)\\n#2 /usr/share/php/Zend/Form/Element.php(1981): Zend_Form_Element->_loadDecorator(Array, \\'div\\')\\n#3 /usr/share/php/Zend/Form/Element.php(2041): Zend_Form_Element->getDecorators...', 512) /usr/share/php/Zend/Form.php:2925
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP Notice:  Trying to get property of non-object in /var/www/cms/application/Bootstrap.php on line 38
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function setLayout() on a non-object in /var/www/cms/application/Bootstrap.php on line 38
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:35:50 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP Notice:  Trying to get property of non-object in /var/www/cms/application/Bootstrap.php on line 38
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function setLayout() on a non-object in /var/www/cms/application/Bootstrap.php on line 38
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:36:39 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP Notice:  Trying to get property of non-object in /var/www/cms/application/Bootstrap.php on line 38
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function setLayout() on a non-object in /var/www/cms/application/Bootstrap.php on line 38
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:36:44 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function setLayout() on a non-object in /var/www/cms/application/Bootstrap.php on line 39
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:38:26 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function setLayout() on a non-object in /var/www/cms/application/Bootstrap.php on line 39
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'view') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:42:16 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initView() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function setLayout() on a non-object in /var/www/cms/application/Bootstrap.php on line 31
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'autoload') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:622
+[Thu Mar 08 20:42:41 2012] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initAutoLoad() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:669
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Cms_Controller_Plugin_RequestedModuleLayoutLoader' not found in /usr/share/php/Zend/Application/Resource/Frontcontroller.php on line 117
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP Stack trace:
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap($resource = *uninitialized*) /var/www/cms/public/index.php:25
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap($resource = NULL) /usr/share/php/Zend/Application.php:355
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap($resource = NULL) /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:586
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource($resource = 'frontcontroller') /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:626
+[Thu Mar 08 20:52:10 2012] [error] [client 127.0.0.1] PHP   6. Zend_Application_Resource_Frontcontroller->init() /usr/share/php/Zend/Application/Bootstrap/BootstrapAbstract.php:683
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP Notice:  Undefined variable: auth in /var/www/cms/application/layouts/scripts/back.phtml on line 39, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /var/www/cms/public/index.php:51, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /usr/share/php/Zend/Application.php:366, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch($request = *uninitialized*, $response = *uninitialized*) /usr/share/php/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Plugin_Broker->postDispatch($request = class Zend_Controller_Request_Http { protected $_paramSources = array (0 => '_GET', 1 => '_POST'); protected $_requestUri = '/admin/'; protected $_baseUrl = ''; protected $_basePath = NULL; protected $_pathInfo = '/admin/'; protected $_params = array ('module' => 'admin', 'controller' => 'index', 'action' => 'index'); protected $_rawBody = NULL; protected $_aliases = array (); protected $_dispatched = TRUE; protected $_module = 'admin'; protected $_moduleKey = 'module'; protected $_controller = 'index'; protected $_controllerKey = 'controller'; protected $_action = 'index'; protected $_actionKey = 'action' }) /usr/share/php/Zend/Controller/Front.php:965, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   6. Zend_Layout_Controller_Plugin_Layout->postDispatch($request = class Zend_Controller_Request_Http { protected $_paramSources = array (0 => '_GET', 1 => '_POST'); protected $_requestUri = '/admin/'; protected $_baseUrl = ''; protected $_basePath = NULL; protected $_pathInfo = '/admin/'; protected $_params = array ('module' => 'admin', 'controller' => 'index', 'action' => 'index'); protected $_rawBody = NULL; protected $_aliases = array (); protected $_dispatched = TRUE; protected $_module = 'admin'; protected $_moduleKey = 'module'; protected $_controller = 'index'; protected $_controllerKey = 'controller'; protected $_action = 'index'; protected $_actionKey = 'action' }) /usr/share/php/Zend/Controller/Plugin/Broker.php:333, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   7. Zend_Layout->render($name = *uninitialized*) /usr/share/php/Zend/Layout/Controller/Plugin/Layout.php:143, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   8. Zend_View_Abstract->render($name = 'back.phtml') /usr/share/php/Zend/Layout.php:796, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   9. Zend_View->_run('/var/www/cms/application/layouts/scripts/back.phtml') /usr/share/php/Zend/View/Abstract.php:888, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP  10. include() /usr/share/php/Zend/View.php:108, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function hasIdentity() on a non-object in /var/www/cms/application/layouts/scripts/back.phtml on line 39, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   1. {main}() /var/www/cms/public/index.php:0, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /var/www/cms/public/index.php:51, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /usr/share/php/Zend/Application.php:366, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch($request = *uninitialized*, $response = *uninitialized*) /usr/share/php/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Plugin_Broker->postDispatch($request = class Zend_Controller_Request_Http { protected $_paramSources = array (0 => '_GET', 1 => '_POST'); protected $_requestUri = '/admin/'; protected $_baseUrl = ''; protected $_basePath = NULL; protected $_pathInfo = '/admin/'; protected $_params = array ('module' => 'admin', 'controller' => 'index', 'action' => 'index'); protected $_rawBody = NULL; protected $_aliases = array (); protected $_dispatched = TRUE; protected $_module = 'admin'; protected $_moduleKey = 'module'; protected $_controller = 'index'; protected $_controllerKey = 'controller'; protected $_action = 'index'; protected $_actionKey = 'action' }) /usr/share/php/Zend/Controller/Front.php:965, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   6. Zend_Layout_Controller_Plugin_Layout->postDispatch($request = class Zend_Controller_Request_Http { protected $_paramSources = array (0 => '_GET', 1 => '_POST'); protected $_requestUri = '/admin/'; protected $_baseUrl = ''; protected $_basePath = NULL; protected $_pathInfo = '/admin/'; protected $_params = array ('module' => 'admin', 'controller' => 'index', 'action' => 'index'); protected $_rawBody = NULL; protected $_aliases = array (); protected $_dispatched = TRUE; protected $_module = 'admin'; protected $_moduleKey = 'module'; protected $_controller = 'index'; protected $_controllerKey = 'controller'; protected $_action = 'index'; protected $_actionKey = 'action' }) /usr/share/php/Zend/Controller/Plugin/Broker.php:333, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   7. Zend_Layout->render($name = *uninitialized*) /usr/share/php/Zend/Layout/Controller/Plugin/Layout.php:143, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   8. Zend_View_Abstract->render($name = 'back.phtml') /usr/share/php/Zend/Layout.php:796, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP   9. Zend_View->_run('/var/www/cms/application/layouts/scripts/back.phtml') /usr/share/php/Zend/View/Abstract.php:888, referer: http://smallcms.instanceof.org/
+[Thu Mar 08 21:19:24 2012] [error] [client 127.0.0.1] PHP  10. include() /usr/share/php/Zend/View.php:108, referer: http://smallcms.instanceof.org/

@@ -39,7 +39,7 @@ $auth = Zend_Auth::getInstance();
                                 <li class="divider-vertical"></li>
                                 <? if ($auth->hasIdentity()){?>
                                     <li>
-                                        <a href="" title="My Profile">
+                                        <a href="<?= $auth->getIdentity()->role == 'admin'? '/admin/' : ''  ?>" title="My Profile">
                                             <?= (!empty($auth->getIdentity()->first_name))? 
                                                 $auth->getIdentity()->first_name : $auth->getIdentity()->email ?>
                                         </a>
