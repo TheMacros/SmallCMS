@@ -48,4 +48,5 @@ $router->addRoute(
                 )
         )
 );
+
 $application->run();

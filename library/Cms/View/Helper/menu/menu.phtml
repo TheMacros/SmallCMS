@@ -1,0 +1,16 @@
+<? if ($this->items){?>
+    <ul class="nav<?= !empty($this->addClass)? $this->addClass : '' ?>">
+        <?
+        switch ($this->position){
+            case 'top':
+                $this->setScriptPath(dirname(__FILE__));
+                echo $this->PartialLoop('_partials/menu-item-top.phtml', $this->items);
+                break;
+            case 'left':
+            case 'right':
+                $this->setScriptPath(dirname(__FILE__));
+                echo $this->PartialLoop('_partials/menu-item.phtml', $this->items);
+                break;
+        }?>
+    </ul>
+<? } ?>

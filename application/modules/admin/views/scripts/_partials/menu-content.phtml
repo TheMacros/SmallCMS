@@ -1,0 +1,62 @@
+<div id="menu-<?= $this->id ?>" class="tab-pane">
+    
+    <form class="well form-inline menu-options">
+        <ul>
+            <li><label class="required">Title</label></li>
+            <li><input class="input-small" name="title" value="<?= $this->title ?>"/></li>
+        </ul>
+        <ul>
+            <li><label>Status</label></li>
+            <li>
+                <select class="input-small" name="status">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                    <option value="deleted">Deleted</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li><label>Position</label></li>
+            <li>
+                <select class="input-small" name="position">
+                    <option value="top">Top</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                    <option value="footer">Footer</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li><label>Module</label></li>
+            <li>
+                <select class="input-small" name="module">
+                    <option value="default">Default</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li><label>Description</label></li>
+            <li><textarea name="description"><?= $this->description ?></textarea></li>
+        </ul>
+        <div class="form-actions">
+            <div class="btn-group">
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                Action
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="menu-save"><i class="icon-ok"></i>Save changes</a></li>
+                <li><a class="menu-add-item" itemid="<?= $this->id ?>"><i class="icon-plus"></i>Add item</a></li>
+                <li class="divider"></li>
+                <li><a class="menu-delete" itemid="<?= $this->id ?>"><i class="icon-trash"></i>Delete menu</a></li>
+            </ul>
+            </div>
+        </div>
+    </form>    
+    <ul class="nav nav-pills nav-stacked span6 manage">
+        <? if (!empty($this->subitems)){?>
+            <?= $this->PartialLoop('_partials/menu-item.phtml', $this->subitems) ?>
+        <? } ?>
+    </ul>
+</div>

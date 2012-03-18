@@ -17,6 +17,7 @@ $(document).ready(function(){
         login.auth(email, pass);
         return false;
     })
+    $('[rel="tooltip"]').tooltip();
 });
 login.formShow = function(){
     $('#auth-form').show('slide', {'direction': 'up'}, function(){

@@ -1,6 +1,18 @@
 body > .container {
   position: relative; }
 
+a {
+  cursor: pointer; }
+
+i.fader {
+  background: url("../img/fader.png") repeat-y scroll 0 0 transparent;
+  height: 100%;
+  width: 30px;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
 .clear {
   clear: left; }
 
@@ -75,3 +87,48 @@ form.login {
     position: absolute;
     top: 13px;
     width: 328px; }
+
+.menu-options {
+  float: left;
+  width: 500px; }
+  .menu-options ul {
+    float: left; }
+    .menu-options ul li {
+      list-style: none outside none; }
+      .menu-options ul li textarea {
+        width: 435px; }
+  .menu-options .form-actions {
+    width: 460px;
+    padding-bottom: 0;
+    float: left;
+    margin-bottom: 0; }
+    .menu-options .form-actions i {
+      margin-right: 5px; }
+
+.nav.manage {
+  margin-top: 2px; }
+  .nav.manage .manage {
+    margin-bottom: 0; }
+  .nav.manage li {
+    margin-bottom: 2px;
+    clear: left;
+    width: 350px; }
+    .nav.manage li .menu-item {
+      margin: 0 !important; }
+    .nav.manage li .menu-item-options {
+      border: 1px solid #0088cc;
+      padding: 10px;
+      overflow: hidden;
+      display: none; }
+      .nav.manage li .menu-item-options .actions {
+        overflow: hidden; }
+        .nav.manage li .menu-item-options .actions li {
+          float: left;
+          width: auto; }
+    .nav.manage li.active > .menu-item {
+      border-radius: 4px 4px 0 0; }
+
+#menu-item-new {
+  display: none;
+  margin: 0;
+  clear: left; }

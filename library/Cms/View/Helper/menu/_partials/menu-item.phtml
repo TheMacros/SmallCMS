@@ -1,0 +1,6 @@
+<? if( $this->link == $_SERVER['REQUEST_URI']){
+    $addClass = 'active';
+}?>
+<li class="<?= !empty($addClass)? $addClass : '' ?>"> 
+    <a href="<?= $this->link ?>"><i class="<?= $this->icon? $this->icon: 'icon-blank'?>"></i><?= $this->title ?></a>
+</li>

@@ -1,0 +1,21 @@
+<li class="<?= $this->addClass ?>">
+    <a class="menu-item">
+        <i class="<?= ($this->icon)? $this->icon : 'icon-blank'?>"></i>
+        <?= $this->title ?>
+        <i class="icon-chevron-down pull-right"></i>
+    </a>
+    <div class="menu-item-options">
+        <ul class="pull-right actions">
+            <li>
+                <a rel="tooltip" title="Remove item" class="menu-item-delete" itemid="<?= $this->id ?>">
+                    <i class="icon-trash"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <? if (!empty($this->subitems)){ ?>
+    <ul class="nav nav-pills nav-stacked span6 manage">
+        <?= $this->PartialLoop('_partials/menu-item.phtml', $this->subitems) ?>
+    </ul>
+    <? } ?>
+</li>

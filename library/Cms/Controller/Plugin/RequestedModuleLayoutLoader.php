@@ -21,6 +21,7 @@ class Cms_Controller_Plugin_RequestedModuleLayoutLoader extends Zend_Controller_
             // файл bootstrap-responsive.css
             $view = new Zend_View();
             $view->headLink()->appendStylesheet('/css/bootstrap-responsive.css');
+            $view->headScript()->appendFile('/js/admin.js');
         }
         // если конфиг содержит параметр module_name.resources.layout.layout
         if (isset($config[$moduleName]['resources']['layout']['layout'])) {

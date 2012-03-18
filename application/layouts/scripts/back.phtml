@@ -19,6 +19,20 @@ $auth = Zend_Auth::getInstance();
         ?>
     </head>
     <body>
+        
+        <div class="modal fade" id="modalPopup">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal">×</a>
+                <h3>Remove menu item?</h3>
+            </div>
+        <div class="modal-body">
+            <p>This item can't be restored</p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn btn-primary" data-loading-text="loading...">Delete</a>
+            <a class="btn" data-dismiss="modal">Close</a>
+        </div>
+    </div>
         <div class="container-fluid">
             <div class="header">
 
@@ -36,7 +50,7 @@ $auth = Zend_Auth::getInstance();
                         </a>
                         <div class="nav-collapse">
                             <!-- выводим главное меню -->
-                            <?= $this->layout()->nav ?>
+                            <?= $this->menu('top', 'admin') ?>
                             <!-- выводим форму поиска -->
                             <?= $this->layout()->searchform ?>
                             <ul class="nav pull-right">
@@ -70,7 +84,7 @@ $auth = Zend_Auth::getInstance();
                     <div class="span3">
                         <div class="well" style="padding: 8px 0">
                             <!-- выводим меню пользователя -->
-                            <?= $this->layout()->userMenu ?>
+                            <?= $this->menu('left', 'admin') ?>
                         </div>
                     </div>
                     <div class="content span9">

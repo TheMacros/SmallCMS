@@ -1,0 +1,23 @@
+<h2>Manage menus</h2>
+<div class="row-fluid">
+<?php
+    if ($this->menus){?>
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <?= $this->PartialLoop('_partials/menu.phtml', $this->menus) ?>
+        </ul>
+        <div class="tab-content span8">
+            <?= $this->PartialLoop('_partials/menu-content.phtml', $this->menus) ?>
+        </div>
+    </div>
+    <?php }else{ ?>
+    <div class="alert alert-info">
+        No menu added yet.
+    </div>
+<?php } ?>
+    <div class="well span" id="menu-item-new">
+        <a id="menu-item-new-remove" class="pull-right" rel="tooltip" title="Close this form"><i class="icon-remove"></i></a>
+        <?= new Form_MenuItem() ?>
+    </div>
+</div>
+<a href="/admin/menu/add" class="btn btn-primary">Add menu</a>

@@ -31,7 +31,7 @@ $auth = Zend_Auth::getInstance();
                         </a>
                         <div class="nav-collapse">
                             <!-- выводим главное меню -->
-                            <?= $this->layout()->nav ?>
+                            <?= $this->menu('top', 'default') ?>
                             
                             <!-- выводим форму поиска -->
                             <?= $this->layout()->searchform ?>
@@ -68,7 +68,7 @@ $auth = Zend_Auth::getInstance();
             <div class="span3">
                 <div class="well" style="padding: 8px 0">
                     <!-- выводим меню пользователя -->
-                    <?= $this->layout()->userMenu ?>
+                    <?= $this->menu('left', 'default') ?>
                 </div>
             </div>
             <div class="container main-content">

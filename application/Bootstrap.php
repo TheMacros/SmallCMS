@@ -35,8 +35,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
     public function _initView(){
         // создаем объект view 
         $view = new Zend_View();
-        $frontController = Zend_Controller_Front::getInstance();
-        $l = new Zend_Application_Resource_Layout();
         
         // указываем doctype соответствующий стандарту HTML5
         $view->doctype('HTML5');
@@ -51,6 +49,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
         
         // подключаем javascript файлы
         $view->headScript()->appendFile('/js/jquery-1.7.1.min.js');
+        $view->headScript()->appendFile('/js/jquery.livequery.js');
         $view->headScript()->appendFile('/js/jquery-ui-1.8.17.custom.min.js');
         $view->headScript()->appendFile('/js/bootstrap.min.js');
         $view->headScript()->appendFile('/js/index.js');
@@ -59,7 +58,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap{
         $view->headLink()->appendStylesheet('/css/bootstrap.css');
         
         $view->headLink()->appendStylesheet('/css/index.css');
-        
+        $view->addHelperPath (APPLICATION_PATH . '/../library/Cms/View/Helper/', 'Cms_View_Helper_');
+        $viewRenderer = new Zend_Controller_Action_Helper_ViewRenderer();
+        $viewRenderer->setView($view);
+        Zend_Controller_Action_HelperBroker::addHelper($viewRenderer);
         return $view;
     }
 }
